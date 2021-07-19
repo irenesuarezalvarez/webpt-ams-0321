@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components"; 
 
 const Card = ({ priority = 0, date, description, reporter }) => {
   const prioList = [
@@ -40,11 +40,9 @@ const CardContainer = styled.article`
   box-shadow: 0px 2px 3px 1px #5149496e;
   transition: transform 0.15s ease-in-out;
   cursor: pointer;
-
   &:not(:last-of-type) {
     margin-right: 0.5rem;
   }
-
   &:hover {
     transform: scale(1.1);
   }
@@ -73,7 +71,6 @@ const Top = styled.section`
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
-
   span {
     font-weight: bold;
   }

@@ -6,7 +6,6 @@ const reset = css`
     font-family: "Helvetica", sans-serif;
     height: 100%;
   }
-
   html,
   body,
   div,
@@ -51,13 +50,11 @@ const reset = css`
     border: 0;
     vertical-align: baseline;
   }
-
   *,
   *:before,
   *:after {
     box-sizing: border-box;
   }
-
   #root {
     height: 100%;
     display: flex;
@@ -67,7 +64,13 @@ const reset = css`
 
 const ResetStyles = createGlobalStyle`${reset}`;
 
-const ProjectTheme = {};
+const ProjectTheme = {
+  color: {
+    primary: "#f90",
+    secondary: "#212353",
+    secondary_light: "#bcbde3",
+  },
+};
 const AltProjectTheme = {};
 
 export { ResetStyles, ProjectTheme, AltProjectTheme };

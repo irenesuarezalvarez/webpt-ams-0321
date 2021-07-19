@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { Switch, Route, Link } from "react-router-dom";
-import axios from "axios";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import Home from "./example/pages/Home";
 import ComplaintsCards from "./example/pages/ComplaintsCards";
 import ComplaintsForm from "./example/pages/ComplaintsForm";
-import Header from "./example/components/Header";
+import Header from "./example/components/layout/Header";
 import Footer from "./example/components/Footer";
-
-import AxiosApi from "./example/utils/AxiosApi";
+import Navbar from "../src/components/Navbar"
 
 import {
   ResetStyles,
@@ -25,19 +24,6 @@ function App() {
   const [toggleTheme, setToggleTheme] = useState(false);
 
   useEffect(() => {
-    // trigger once (when component is done)
-    const fetchData = async () => {
-      // const response = await axios.get(
-      //   "https://jsonplaceholder.typicode.com/users"
-      // );  
-      const response = await AxiosApi("users");
-      console.log("Axios call", response.data);
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
     // trigger on dependency
   }, [toggleTheme]);
 
@@ -50,9 +36,11 @@ function App() {
       <ResetStyles />
       {/* <UseStateExample /> */}
       {/* <Counter /> */}
-      <Header>Iron Hack Complaints Form</Header>
+      <Navbar/>
+      <Header> Iron Hack Complaints Form</Header>
 
       <Main>
+       
         <Switch>
           <Route exact path="/">
             <Link to="/form">

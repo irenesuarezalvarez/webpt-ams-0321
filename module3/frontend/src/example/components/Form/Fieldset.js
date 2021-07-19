@@ -15,7 +15,6 @@ const Container = styled.fieldset`
   padding: 1.3rem 2rem;
   border-radius: 5px;
   border: 1px solid #212353;
-
   &:not(:last-of-type) {
     margin-bottom: 2rem;
   }

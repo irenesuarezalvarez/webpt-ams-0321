@@ -53,7 +53,6 @@ const PrimaryBtn = styled(BaseButton)`
 const SecondaryBtn = styled(BaseButton)`
   background-color: #a57f60; /* cafe au lait*/
   color: white;
-
   &:hover {
     background-color: #876b3a;
   }

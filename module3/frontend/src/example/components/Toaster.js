@@ -36,7 +36,6 @@ const CloseBtn = styled.div`
   position: relative;
   font-size: 0;
   margin-right: 3.5%;
-
   &::after,
   &::before {
     content: "";
@@ -48,7 +47,6 @@ const CloseBtn = styled.div`
     top: 0;
     left: 50%;
   }
-
   &::after {
     transform: rotate(45deg);
   }
